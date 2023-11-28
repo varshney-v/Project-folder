@@ -1,0 +1,134 @@
+    *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        /* body {
+            background-color: #fcc20396;
+            align-items: center;
+        } */
+        main{
+            width: 800px;
+            height: 1122px;
+            top: -632px;
+            left: 3122px;
+            /* border:1px solid black; */
+            margin: auto;
+        }
+        .Interactive_head_section {
+            width: 801px;
+            height: 341px;
+            top: 0px;
+            Left : -22px;
+        }
+        .Descriptive_section{
+            width: 801px;
+            height:540px;
+            background:linear-gradient(0deg, #FFF4C8, #FFF4C8);
+            text-align: center;
+            margin-top: -5px;
+        }
+        .para {
+            width: 801px;
+            height: 400px;
+            top: 371px;
+            left: 65px;
+            padding: 60px;
+            padding-left:50px;
+            background:linear-gradient(0deg, #FFF4C8, #FFF4C8);
+        }
+        .heading{
+            font-family: "MTN Brighter Sans Bold";
+            font-size: 30px;
+            font-weight: 500;
+            line-height: 39px;
+            letter-spacing: 0px;
+            text-align: left;
+        }
+        .para2{
+            font-family:"MTN Brighter Sans Regular";
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 23px;
+            letter-spacing: 0px;
+            text-align: left;
+        }
+        .website_overview_section{
+            width: 800px;
+            height: 203px;
+            top: 810px;
+            left: -1px;
+            font-size: 24px;
+            font-weight: 400;
+            line-height: 35px;
+            letter-spacing: 0px;
+            background-color: rgba(255, 208, 0, 0.884);
+            text-align: center;
+        }
+        .box{
+            padding-top: 16px ;
+            width: 671px;
+            height: 148px;
+            top: 833px;
+            left: 47px;
+            padding-left: 30px;
+            text-align: center;
+            font-family: "MTN Brighter Sans Regular";
+        }
+        .box1{
+            margin-left: 20px;
+            width: 671px;
+            height: 70px;
+            top: 920px;
+            left: 109px;
+            font-family: "MTN Brighter Sans Regular";
+        }
+        .box2 {
+            padding-top: 5px;
+            margin-left: 77px;
+            width: 549px;
+            height: 51px;
+            top: 920px;
+            left: 109px;
+            font-size: 20px;
+            border-radius: 8px;
+            border: 2px solid black;
+            font-family: "MTN Brighter Sans Regular";
+            background:linear-gradient(0deg, rgba(255, 244, 200, 0.72), rgba(255, 244, 200, 0.72));
+
+        }
+        .last_section{
+            padding: 20px;
+            padding-left: 18%;
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 20px;
+            letter-spacing: 0px;
+            text-align: center;
+            width: 801px;
+            height:120px;
+            top: 1013px;
+            left:-1px;
+            background-color: black;
+            color: white;
+        }
+        .para3{
+            width: 517px;
+            height: 50px;
+            top: 1029px;
+            left: 109px;
+        }
+        .image {
+            width: 801px;
+            height: 341px;
+        }
+        .image:hover {
+            cursor: default;
+        }
+        a {
+            text-decoration: none;
+            color: black;
+        }
+        .para3 a{
+            color:white;
+        }
