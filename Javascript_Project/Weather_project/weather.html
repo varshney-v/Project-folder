@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            font-family: 'poppins',sans-serif;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: #222;
+        }
+        .card{
+            width: 90%;
+            max-width: 470px;
+            background:linear-gradient(135deg, #00feba, #5b548a);
+            color: #fff;
+            margin: 100px auto 0;
+            border-radius: 20px;
+            padding:40px 35px;
+            text-align:center;
+        }
+        .search{
+            width:100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .search input{
+            border: 0;
+            outline: 0;
+            background-color: #ebfffc;
+            color: #555;
+            padding: 10px 25px;
+            height:60px;
+            border-radius: 30px;
+            flex: 1;
+            margin-right: 16px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="search">
+            <input type="text" placeholder="enter city name" spellcheck="false" required>
+            <button>
+                <img src="images\search.png" alt="Search_icon">
+            </button>
+        </div>
+        <div class="col">
+            <img src="images\clear.png" alt="clear">
+            <h1 class="temp">22 degree</h1>
+            <h2 class="city">Banglore
+            </h2>
+        </div>
+        <div class="condition">
+            <div class="humidity"style="display: flex; flex-direction: row; justify-content:space-between; padding:10px;">
+                <div class="icon_image" style="display: flex; flex-direction: row; padding-right:10px;">
+                    <img src="images\humidity.png" alt="humidity" width="10px" height="10px">
+                    <br><p id="percent">50%</p>
+                </div>
+                <div class="last_div">
+                    <img src="images\wind.png" alt="wind"  width="10px" height="10px>
+                    <p id="speed">5.66km/hr</p>
+                </div>
+                
+            </div>
+            <div class="wind"style="display: flex; flex-direction: row; justify-content:space-between; padding:10px;>
+                <div class="weather_condition">
+                    <p id="demo1">Humidity</p>
+                </div>
+                <div class="wind_speed">
+                    <p id="demo">Wind Speed</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
