@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins',sans-serif;
+        }
+        body{
+            background-color: aquamarine;
+        }
+        li{
+           list-style: none;
+           position: relative;
+        }
+        li:hover{
+            background-color: antiquewhite;
+        }
+        ul li::before{
+            content:'';
+            position:absolute;
+            height:28px;
+            width:28px;
+            border-radius: 50%;
+            background-image: url("images/uncheck-512.png");
+            background-size: cover;
+            background-position:center;
+            left:8px;
+            top: -5px;
+        }
+        ul li.checked{
+            color:#555;
+            text-decoration:line-through;
+        }
+        ul li.checked::before{
+            background-image: url('images/check.png');
+        }
+        ul{
+            padding: 20px; padding-left: 0px;padding-top:8px;
+        }
+        li{
+            padding-left: 40px; padding-bottom: 10px;
+        }
+        ul li span{
+            position:absolute;
+            width: 40px;
+            aspect-ratio: 1;
+            font-size: 22px;
+            color:#555;
+            line-height: 40px;
+            text-align: center;
+            top:-10px;
+            right: 0;
+        }
+        ul li span:hover{
+            background:#edeef0;
+        }
+        .cont{
+            margin-left: 5px;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .todo{
+            margin-left: 5%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" style="margin: 200px;">
+        <div  style="padding:10px;border-radius: 10px; background-color: rgb(158, 158, 224);margin: 0px;  align-items: center;">
+            <div class="cont" style=""> 
+                <h1 style="display: inline;">
+                To-Do List
+                </h1>
+                <img src="images/pencil.png" alt="notes_icon"width="30px" height="30px">
+            </div>
+            <div class="todo">
+                <input type="text" id="input-box" placeholder=" Add your task" style="width: 400px; height:40px; border-radius: 10px;margin-left: 3px;">
+                <button onclick="Addtask()" style="background-color: orange; width: 57px;height: 40px; border-radius: 10px; margin-left: -px;">Add</button>
+            </div>
+        
+        <ul id="ul"></ul>
+        <!-- <ul style="padding: 30px; padding-left: 0px;padding-top:8px;">
+            <li class="checked" style="padding-left: 40px; padding-bottom: 10px;">Task 1<span>x</span></li>
+            <li class="checked" style="padding-left: 40px; padding-bottom: 10px;">Task 2<span>x</span></li>
+            <li class="checked" style="padding-left: 40px; padding-bottom: 10px;">Task 3<span>x</span></li>
+        </ul> -->
+    </div></div>
+</body>
+    <script>
+        const inputBox = document.getElementById("input-box");
+        const Ul = document.getElementById("ul");
+
+        function Addtask(){
+            if(inputBox.value === ""){
+                alert("please enter value");
+                SaveData();
+            }
+            else {
+                let li = document.createElement("li");
+                li.innerHTML = inputBox.value;
+                Ul.appendChild(li);
+                let span = document.createElement("span")
+                span.innerHTML = "\u00d7";
+                li.appendChild(span);
+                SaveData();
+            }
+            inputBox.value = "";
+            SaveData();
+        }
+        Ul.addEventListener('click',function(e){
+            if(e.target.tagName === "LI"){
+                e.target.classList.toggle("checked");
+            }
+            else if(e.target.tagName === "SPAN"){
+                e.target.parentElement.remove();
+            }
+        },false);
+
+        function SaveData(){
+            localStorage.setItem("data",Ul.innerHTML);
+        }
+        function displaytasklist(){
+            Ul.innerHTML = localStorage.getItem("data");
+        }
+        displaytasklist()
+    </script>
+</html>
